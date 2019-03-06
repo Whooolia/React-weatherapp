@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Button, DefaultDiv, Title } from "./Style";
+import { Input, Button, DefaultDiv, Title, RightDiv } from "./Style";
 // import Button from "./Style";
 
 // Search includes two elements.
@@ -11,13 +11,17 @@ class Search extends React.Component {
     return (
       <DefaultDiv>
         <Title>Weather App</Title>
+
         <Input
           type="type"
           placeholder="Type the location"
-          value={this.props.state}
+          value={this.props.location}
           onChange={this.props.handleChange}
         />
-        <Button type="submit" onClick={this.props.handleSubmit}>
+        <Button
+          type="submit"
+          onClick={() => this.props.fetchWeather(this.props.location)}
+        >
           Get Weather
         </Button>
       </DefaultDiv>
@@ -25,3 +29,5 @@ class Search extends React.Component {
   }
 }
 export default Search;
+
+// if this.props.fetchWeather(argu) it evcuates function right away, so should give () => to evacuate when it needs.

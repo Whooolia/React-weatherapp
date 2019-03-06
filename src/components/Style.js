@@ -14,17 +14,24 @@ const Input = styled.input`
 `;
 
 const Button = styled.button`
-  color: black;
+  color: white;
   background-color: #ff8008;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   width: 80px;
   height: 40px;
   font-size: 1rem;
   bottom: 10px;
   float: right;
-  margin-right: 10px;
+  margin-right: -350px;
   margin-top: 15px;
+`;
+
+const SaveButton = styled.button`
+  border: none;
+  background-color: white;
+  font-size: 2rem;
+  color: #ff8008;
 `;
 
 const DefaultDiv = styled.div`
@@ -48,4 +55,29 @@ const Title = styled.h1`
   margin-left: 30px;
 `;
 
-export { Input, Button, DefaultDiv, Image, Title, CenterDiv };
+const P = styled.p`
+  font-size: 1.5rem;
+`;
+
+const LeftDiv = styled.div`
+  float: left;
+  margin-left: 25rem;
+`;
+
+const RightDiv = styled.div`
+  float: right;
+  margin-right: 25rem;
+`;
+
+export {
+  Input,
+  Button,
+  DefaultDiv,
+  Image,
+  Title,
+  CenterDiv,
+  P,
+  LeftDiv,
+  RightDiv,
+  SaveButton
+};
