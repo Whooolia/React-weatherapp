@@ -48,6 +48,7 @@ const DefaultDiv = styled.div`
 const CenterDiv = styled.div`
   text-align: center;
   margin-top: 20px;
+  min-width: 1000px;
 `;
 
 const Image = styled.img`
@@ -67,12 +68,12 @@ const P = styled.p`
 
 const LeftDiv = styled.div`
   float: left;
-  margin-left: 25rem;
+  margin-left: 29rem;
 `;
 
 const RightDiv = styled.div`
   float: right;
-  margin-right: 25rem;
+  margin-right: 29rem;
 `;
 
 const ListButton = styled.button`
