@@ -1,5 +1,15 @@
 import React from "react";
-import { Image, CenterDiv, P, LeftDiv, RightDiv, SaveButton } from "./Style";
+import {
+  Image,
+  CenterDiv,
+  P,
+  LeftDiv,
+  RightDiv,
+  SaveButton,
+  ListButton,
+  ListDiv,
+  Heading
+} from "./Style";
 
 // Display class component displays weather data from parent component
 class Display extends React.Component {
@@ -31,12 +41,13 @@ class Display extends React.Component {
 
     return (
       <CenterDiv>
-        <h2>Weather for {this.props.location.toUpperCase()}</h2>
-        <SaveButton
-          onClick={this.props.saveLocation}
-          className="fas fa-bookmark"
-        />
-        <i />
+        <CenterDiv>
+          <Heading>Weather for {this.props.location.toUpperCase()}</Heading>
+          <SaveButton
+            onClick={this.props.saveLocation}
+            className="fas fa-bookmark"
+          />
+        </CenterDiv>
         <LeftDiv>
           <P>
             {days[date.getDay()]}, {months[date.getMonth()]} {date.getDate()}
@@ -48,6 +59,7 @@ class Display extends React.Component {
                 alt="weather icon"
               />
               <P>{result.main}</P>
+              <P>{this.props.currentTemp}°c</P>
             </div>
           ))}
         </LeftDiv>
@@ -63,17 +75,20 @@ class Display extends React.Component {
                 alt="weather icon"
               />
               <P>{result.main}</P>
+              <P>{this.props.tomorrowTemp}°c</P>
             </div>
           ))}
         </RightDiv>
-        <h2>
-          Saved Location :
-          {this.props.savedLocation.map(location => (
-            <button onClick={() => this.props.fetchWeather(location)}>
-              {location}
-            </button>
-          ))}
-        </h2>
+        <ListDiv>
+          <h3>
+            Saved Location
+            {this.props.savedLocation.map(location => (
+              <ListButton onClick={() => this.props.fetchWeather(location)}>
+                {location}
+              </ListButton>
+            ))}
+          </h3>
+        </ListDiv>
       </CenterDiv>
     );
   }

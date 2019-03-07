@@ -31,7 +31,12 @@ const SaveButton = styled.button`
   border: none;
   background-color: white;
   font-size: 2rem;
-  color: #ff8008;
+  color: #ffe47a;
+  display: in-line;
+
+  :hover {
+    color: #ff8008;
+  }
 `;
 
 const DefaultDiv = styled.div`
@@ -42,6 +47,7 @@ const DefaultDiv = styled.div`
 
 const CenterDiv = styled.div`
   text-align: center;
+  margin-top: 20px;
 `;
 
 const Image = styled.img`
@@ -69,6 +75,33 @@ const RightDiv = styled.div`
   margin-right: 25rem;
 `;
 
+const ListButton = styled.button`
+  color: black;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 7rem;
+  height: 2.8rem;
+  font-size: 1.2rem;
+  bottom: 10px;
+  float: right;
+  margin-left: 10px;
+
+  :hover {
+    color: #ff8008;
+  }
+`;
+
+const ListDiv = styled.div`
+  float: left;
+  margin-top: 5rem;
+  margin-left: 2rem;
+`;
+
+const Heading = styled.h2`
+  display: inline;
+`;
+
 export {
   Input,
   Button,
@@ -79,5 +112,8 @@ export {
   P,
   LeftDiv,
   RightDiv,
-  SaveButton
+  SaveButton,
+  ListButton,
+  ListDiv,
+  Heading
 };
