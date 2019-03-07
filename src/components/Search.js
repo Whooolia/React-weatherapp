@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Button, DefaultDiv, Title, RightDiv } from "./Style";
+import { Input, Button, DefaultDiv, Title } from "./Style";
 // import Button from "./Style";
 
 // Search includes two elements.
